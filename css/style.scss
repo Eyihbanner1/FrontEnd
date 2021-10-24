@@ -1,0 +1,151 @@
+@import url(https://fonts.google.com/share?selection.family=Red%20Hat%20Display:wght@500;700;900);
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Red Hat Display', sans-serif;
+    background-image: url(/images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    background-size: contain;
+    background-color: hsl(225, 100%, 94%);
+    position: relative;
+}
+
+.container{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 400px;
+    background-color: white;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+
+
+.content-section{
+    padding: 7%;
+    text-align: center;
+}
+
+.order-title{
+    margin-bottom: 1rem;
+    color: hsl(223, 47%, 23%);
+    font-weight: 900;
+
+}
+
+.order-content{
+    color: hsl(224, 23%, 55%);
+    margin-bottom: 1rem;
+}
+
+.plan-section{
+    display: flex;
+    background: hsl(225, 100%, 98%);
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    padding: 1rem;
+
+    .plan-section-left{
+        display: flex;
+        align-items: center;
+
+        .annual-plan-section{
+            margin-left: 20px;
+
+            p{
+                color: hsl(224, 23%, 55%);
+            }
+            
+        }
+    }
+
+    a{
+            
+        font-family: 'Red Hat Display', sans-serif;
+        font-weight: 900;
+        color: hsl(245, 75%, 52%);
+        transition: color .7s ease;
+
+        &:hover{
+            text-decoration: none;
+            color: hsl(245, 82%, 63%);
+        }
+    }
+    
+
+}
+
+
+.proceed-btn{
+    display: block;
+    text-decoration: none;
+    margin-bottom: 1rem;
+    background: hsl(245, 75%, 52%);
+    padding-block: 1rem;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px -2px hsl(245, 75%, 52%);
+    transition: background .7s ease;
+
+    &:hover{
+        background: hsl(245, 82%, 63%);
+
+    }
+}
+
+.cancel-btn{
+    text-decoration: none;
+    color: hsl(224, 23%, 55%);
+    margin: 1rem;
+    font-weight: 900;
+    transition: color .7s ease;
+
+    &:hover{
+        color: black;
+    }
+}
+
+@media only screen and (max-width:425px) {
+    
+    body{
+        background-image: url(/images/pattern-background-mobile.svg);
+    }
+    
+    .container{
+        max-width: 80%;
+    }
+
+    .hero-section img{
+        
+        max-width: 280px;
+    }
+
+    .content-section{
+        padding: 5%;
+    }
+
+    .order-title{
+        font-size: 20px;
+    }
+
+    .plan-section{
+        padding: 0.3rem;
+    
+    }
+
+    .annual-plan-section{
+        margin-left: 0px;
+    }
+
+
+}
